@@ -33,27 +33,4 @@ public class RestaurantAccount {
     public RestaurantAccount() {
     }
 
-    public Long getRestaurantAccountId() {
-        return restaurantAccountId;
-    }
-
-    public void setRestaurantAccountId(Long restaurantAccountId) {
-        this.restaurantAccountId = restaurantAccountId;
-    }
-
-    public String getRestaurantEmail() {
-        return restaurantEmail;
-    }
-
-    public void setRestaurantEmail(String restaurantEmail) {
-        this.restaurantEmail = restaurantEmail;
-    }
-
-    public String getRestaurantPassword() {
-        return restaurantPassword;
-    }
-
-    public void setRestaurantPassword(String restaurantPassword) {
-        this.restaurantPassword = restaurantPassword;
-    }
 }
