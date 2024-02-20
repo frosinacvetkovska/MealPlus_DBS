@@ -16,7 +16,7 @@ import org.hibernate.annotations.Immutable;
 @AllArgsConstructor
 public class MealInfo {
     @Id
-    private Integer mealId;
+    private Long mealId;
     private String mealName;
     private Double mealPrice;
     private String mealDescription;

@@ -18,7 +18,7 @@ import java.util.Date;
 @AllArgsConstructor
 public class OrderList {
     @Id
-    private Integer orderId;
+    private Long orderId;
     private Date dateOfOrder;
     private String orderNumber;
     private Date deliveryTime;

@@ -20,10 +20,10 @@ public class Meal {
     private String mealDescription;
 
     @Column(name = "price", nullable = false)
-    private float mealPrice;
+    private Double mealPrice;
 
     @Column(name = "discount", nullable = false)
-    private float mealDiscount;
+    private Double mealDiscount;
 
     @Column(name = "category", nullable = false)
     @Enumerated(value = EnumType.STRING)
@@ -32,7 +32,7 @@ public class Meal {
     @Column(name = "picture")
     private String mealPicture;
 
-    public Meal(String mealName, String mealDescription, float mealPrice, float mealDiscount, Category mealCategory, String mealPicture) {
+    public Meal(String mealName, String mealDescription, Double mealPrice, Double mealDiscount, Category mealCategory, String mealPicture) {
         this.mealName = mealName;
         this.mealDescription = mealDescription;
         this.mealPrice = mealPrice;
@@ -41,7 +41,7 @@ public class Meal {
         this.mealPicture = mealPicture;
     }
 
-    public Meal(Long mealId, String mealName, String mealDescription, float mealPrice, float mealDiscount, Category mealCategory, String mealPicture) {
+    public Meal(Long mealId, String mealName, String mealDescription, Double mealPrice, Double mealDiscount, Category mealCategory, String mealPicture) {
         this.mealId = mealId;
         this.mealName = mealName;
         this.mealDescription = mealDescription;

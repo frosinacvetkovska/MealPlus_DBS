@@ -19,11 +19,11 @@ public class Rating {
     private String ratingText;
 
     @ManyToOne
-    @JoinColumn(name = "customer_id", referencedColumnName = "customer_id", nullable = false)
+    @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
 
     @ManyToOne
-    @JoinColumn(name = "meal_id", referencedColumnName = "meal_id", nullable = false)
+    @JoinColumn(name = "meal_id", nullable = false)
     private Meal meal;
 
     public Rating(int grade, String ratingText, Customer customer, Meal meal) {

@@ -27,7 +27,7 @@ public class Orders {
     private int quantity;
 
     @ManyToOne
-    @JoinColumn(name = "customer_id", referencedColumnName = "customer_id", nullable = false)
+    @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
 
     public Orders(Long orderId, LocalDateTime dateTime, Long orderNumber, LocalDateTime deliveryTime, int quantity, Customer customer) {

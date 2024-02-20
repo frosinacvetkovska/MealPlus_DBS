@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalTime;
+import java.util.List;
 
 @Data
 @Table(name = "restaurant")
@@ -26,24 +27,33 @@ public class Restaurant {
     @Column(name = "working_till", nullable = false)
     private LocalTime workingTill;
 
+    @ElementCollection
     @Column(name = "location", nullable = false)
-    private String restaurantLocation;
+    private List<String> restaurantLocations;
 
     @Column(name = "description")
     private String restaurantDescription;
 
     @ManyToOne
-    @JoinColumn(name = "account_id", referencedColumnName = "account_id", nullable = false)
+    @JoinColumn(name = "account_id", nullable = false)
     private RestaurantAccount restaurantAccount;
 
-    public Restaurant(String restaurantName, String phoneNumber, LocalTime workingFrom, LocalTime workingTill, String restaurantLocation, String restaurantDescription, RestaurantAccount restaurantAccount) {
+    public Restaurant(String restaurantName, String phoneNumber, LocalTime workingFrom, LocalTime workingTill, List<String> restaurantLocations, String restaurantDescription, RestaurantAccount restaurantAccount) {
         this.restaurantName = restaurantName;
         this.phoneNumber = phoneNumber;
         this.workingFrom = workingFrom;
         this.workingTill = workingTill;
-        this.restaurantLocation = restaurantLocation;
+        this.restaurantLocations = restaurantLocations;
         this.restaurantDescription = restaurantDescription;
         this.restaurantAccount = restaurantAccount;
+    }
+
+    public List<String> getRestaurantLocations() {
+        return restaurantLocations;
+    }
+
+    public void setRestaurantLocations(List<String> restaurantLocations) {
+        this.restaurantLocations = restaurantLocations;
     }
 
     public Restaurant() {

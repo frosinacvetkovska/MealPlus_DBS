@@ -31,19 +31,6 @@ public class Customer {
     @Column(name = "adress", nullable = false)
     private String customerAdress;
 
-    public Customer(Long customerId) {
-        this.customerId = customerId;
-    }
-
-    public Customer(String customerName, String customerSurname, String customerEmail, String phoneNumber, String customerPassword, String customerAdress) {
-        this.customerName = customerName;
-        this.customerSurname = customerSurname;
-        this.customerEmail = customerEmail;
-        this.phoneNumber = phoneNumber;
-        this.customerPassword = customerPassword;
-        this.customerAdress = customerAdress;
-    }
-
     public Customer(Long customerId, String customerName, String customerSurname, String customerEmail, String phoneNumber, String customerPassword, String customerAdress) {
         this.customerId = customerId;
         this.customerName = customerName;

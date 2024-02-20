@@ -12,11 +12,11 @@ public class DailyMenu {
     private Long dailyMenuId;
 
     @ManyToOne
-    @JoinColumn(name = "meal_id", referencedColumnName = "meal_id", nullable = false)
+    @JoinColumn(name = "meal_id", nullable = false)
     private Meal meal;
 
     @ManyToOne
-    @JoinColumn(name = "restaurant_id", referencedColumnName = "restaurant_id", nullable = false)
+    @JoinColumn(name = "restaurant_id", nullable = false)
     private Restaurant restaurant;
 
     public DailyMenu() {

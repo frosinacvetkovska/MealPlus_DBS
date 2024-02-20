@@ -19,11 +19,11 @@ public class OrderMeal {
     private int quantity;
 
     @ManyToOne
-    @JoinColumn(name = "meal_id", referencedColumnName = "meal_id", nullable = false)
+    @JoinColumn(name = "meal_id", nullable = false)
     private Meal meal;
 
     @ManyToOne
-    @JoinColumn(name = "order_id", referencedColumnName = "order_id", nullable = false)
+    @JoinColumn(name = "order_id", nullable = false)
     private Orders order_id;
 
     public OrderMeal() {
