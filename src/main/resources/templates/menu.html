@@ -346,10 +346,10 @@
                 <div class="content" id="app">
                     <p>Menu</p>
                     <ul class="typefood">
-                        <li><button style="border: none; background: none; " v-on:click="items = breakfast">Breakfast</button></li>
-                        <li><button style="border: none; background: none; " v-on:click="items = lunch" >Lunch</button></li>
-                        <li><button style="border: none; background: none; " v-on:click="items = dinner">Dinner</button></li>
-                        <li><button style="border: none; background: none; " v-on:click="items = dessert">Dessert</button></li>
+                        <li><button style="border: none; background: none; " th:onclick="'items = breakfast'">Breakfast</button></li>
+                        <li><button style="border: none; background: none; " th:onclick="'items = lunch'">Lunch</button></li>
+                        <li><button style="border: none; background: none; " th:onclick="'items = dinner'">Dinner</button></li>
+                        <li><button style="border: none; background: none; " th:onclick="'items = dessert'">Dessert</button></li>
                     </ul>
                     <div class="container" >
                         <!-- modal -->

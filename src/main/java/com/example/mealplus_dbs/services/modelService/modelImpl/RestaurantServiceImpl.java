@@ -1,5 +1,6 @@
 package com.example.mealplus_dbs.services.modelService.modelImpl;
 
+import com.example.mealplus_dbs.model.Orders;
 import com.example.mealplus_dbs.model.Restaurant;
 import com.example.mealplus_dbs.repositories.RestaurantRepository;
 import com.example.mealplus_dbs.services.modelService.RestaurantService;
@@ -24,5 +25,10 @@ public class RestaurantServiceImpl implements RestaurantService {
     @Override
     public List<Restaurant> getAllRestaurants() {
         return restaurantRepository.findAll();
+    }
+
+    @Override
+    public Restaurant getRestaurantById(Long restaurantId) {
+        return restaurantRepository.findById(restaurantId).orElse(null);
     }
 }

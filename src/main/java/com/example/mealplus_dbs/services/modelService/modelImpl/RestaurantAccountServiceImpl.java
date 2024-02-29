@@ -28,19 +28,4 @@ public class RestaurantAccountServiceImpl implements RestaurantAccountService {
     public void saveRestaurantAccount(RestaurantAccount restaurantAccount) {
         restaurantAccountRepository.save(restaurantAccount);
     }
-
-    @Override
-    public void updateRestaurantAccount(Long accountId, RestaurantAccount updatedRestaurantAccount) {
-        RestaurantAccount existingRestaurantAccount = getRestaurantAccountById(accountId);
-        if(existingRestaurantAccount != null){
-            existingRestaurantAccount.setRestaurantEmail(updatedRestaurantAccount.getRestaurantEmail());
-            existingRestaurantAccount.setRestaurantPassword(updatedRestaurantAccount.getRestaurantPassword());
-            restaurantAccountRepository.save(existingRestaurantAccount);
-        }
-    }
-
-    @Override
-    public void deleteRestaurantAccount(Long accountId) {
-        restaurantAccountRepository.deleteById(accountId);
-    }
 }
